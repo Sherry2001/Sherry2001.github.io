@@ -2788,7 +2788,7 @@
 			}
 
 			.wrapper.style3{
-				background-attachment: fixed;
+				background-attachment: scroll;
 				background-image: url("images/overlay.png"), url("../../images/banner.jpg");
 				background-size: cover;
 			}
