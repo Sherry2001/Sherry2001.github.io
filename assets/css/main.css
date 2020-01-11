@@ -3184,7 +3184,7 @@
 				padding: 4em 0em 4em 0em;
 				background-size: cover;
 				background-image: url("images/overlay.png"), url("../../images/banner.jpg");
-				background-attachment: fixed;
+				background-attachment: scroll;
 			}
 
 		}
