@@ -2787,6 +2787,12 @@
 				padding: 2em 0 1em 0;
 			}
 
+			.wrapper.style3{
+				background-attachment: scroll;
+				background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+				background-size: cover;
+			}
+
 		}
 
 /* Header */
@@ -3189,7 +3195,8 @@
 			#banner {
 				padding: 4em 0em 4em 0em;
 				background-size: cover;
-
+				background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+				background-attachment: scroll;
 			}
 
 		}
