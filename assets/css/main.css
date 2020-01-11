@@ -3129,6 +3129,8 @@
 
 			#banner {
 				padding: 5em 0 5em 0;
+				background-size: cover;
+
 			}
 
 				#banner h2 {
@@ -3141,6 +3143,8 @@
 
 			#banner {
 				padding: 5em 0 5em 0;
+				background-size: cover;
+
 			}
 
 		}
@@ -3149,6 +3153,8 @@
 
 			#banner {
 				padding: 6em 2em 6em 2em;
+				background-size: cover;
+
 			}
 
 				#banner br {
@@ -3169,6 +3175,19 @@
 
 			#banner {
 				padding: 4em 2em 4em 2em;
+				background-size: cover;
+
+			}
+
+		}
+
+
+		@media screen and (max-width: 300px) {
+
+			#banner {
+				padding: 4em 2em 4em 2em;
+				background-size: cover;
+
 			}
 
 		}
