@@ -130,7 +130,7 @@
 									<h2>Stay Connected with PSO</h2>
 									<p> Sign up to receive concert updates</p>
 								</header>
-								<form method="post" action="#">
+								<form name = "submit-to-google-sheet">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
 											<input type="text" name="firstname" id="firstName" value="" placeholder="First Name" />
@@ -144,17 +144,56 @@
 										</div>
 										
 									
-									
+										<!-- https://script.google.com/macros/s/AKfycbw7rSIHUBg5MCDzA2bIW3JPCejD19nxwgdCm3CDmbuqjV4mHvtT/exec -->
 										<div class="12u$">
 											<ul class="actions">
-												<li><input type="submit" value="Subscribe" class="special" /></li>
-												<li><input type="reset" value="Reset" /></li>
+												<li><a href="index.html"><input type="submit" value = "Submit" class="button special"/></a></li>
+												<li><input type="reset" value = "reset" class = "button "/></li>
 											</ul>
 										</div>
+
+										
 									</div>
+
+										<p class="js-success-message is-hidden">You have been added to the PSO Email list!</p>
+										<p class="js-error-message is-hidden">Oh no! Something's wrong!</p>
 								</form>
 								
 						</div>
+
+						<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+						<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+						<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+						  <script>
+							const scriptURL = 'https://script.google.com/macros/s/AKfycbw7rSIHUBg5MCDzA2bIW3JPCejD19nxwgdCm3CDmbuqjV4mHvtT/exec'
+							const form = document.forms['submit-to-google-sheet']
+						    const successMessage = document.querySelector('.js-success-message')
+							const errorMessage = document.querySelector('.js-error-message')
+							
+							form.addEventListener('submit', e => {
+							  e.preventDefault()
+							  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+								.then(response => showSuccessMessage(response))
+								.catch(error => showErrorMessage(error))
+							})
+							function showSuccessMessage (response) {
+								console.log('Success!', response)
+								setTimeout(() => {
+									successMessage.classList.remove('is-hidden')
+								}, 500)
+								document.getElementById('firstName').value = '';
+								document.getElementById('lastName').value = '';
+								document.getElementById('email').value = '';
+
+							}
+
+							function showErrorMessage (error) {
+								console.error('Error!', error.message)
+								setTimeout(() => {
+									errorMessage.classList.remove('is-hidden')
+								}, 500)
+							}
+						  </script>
 				</section>
 
 
