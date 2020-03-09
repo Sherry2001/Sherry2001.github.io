@@ -49,33 +49,7 @@
 				
 		</section>
 		
-
-			<!-- Who are We  -->
-				<!-- <section id="who" class="wrapper style2 special">
-					<div class="container">
-							<h2>Who are we?</h2>
-						
-						<div class="row 150%">
-							<div class="6u 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/community.jpg" alt="" />
-									<h3>A Community</h3>
-								</div>
-								<a href="members.html" class="button big">View Gallery</a></li>
-								
-							</div>
-
-							<div class="6u$ 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/orchestra.jpg" alt="" />
-									<h3>UPenn's Premier Symphony Orchestra</h3>
-								</div>
-								<a href="generic.html" class="button big">Learn More</a></li>
-
-							</div>
-						</div>
-					</div>
-				</section> -->
+		
 
 			<!-- Upcoming Concerts  -->
 				<section id="upcoming" class="wrapper style1">
@@ -84,8 +58,10 @@
 							<h2>Upcoming Concerts</h2>
 							<p>2019-2020</p>
 						</header>
+						<center>
+
 						<div class="feature-grid">
-							<div class="feature">
+							<!-- <div class="feature">
 								<div class="image rounded"><img src="images/rachmaninoff.jpg" alt="" /></div> 
 
 								<div class="content">
@@ -100,7 +76,7 @@
 											<b>Puccini</b> - "O suave fanciulla" from La Boheme  <br>
 											<b>Rachmaninoff</b> - Symphonic Dances</p> 
 								</div>
-							</div>
+							</div> -->
 							<div class="feature">
 								<div class="image rounded"><img src="images/shostakovich.jpg" alt="" /></div>
 								<div class="content">
@@ -110,16 +86,17 @@
 									</header>
 									<p>
 										<b>Copland</b> - Fanfare for the Common Man <br>
-										<b>Copland</b> - Appalachian Spring <br>
 										<b>Copland</b> - "Hoedown" from Rodeo <br>
+										<b>Copland</b> - Appalachian Spring <br>
 										<b>Shostakovich</b> - Symphony No. 5 <br>
 									</p>
 								</div>
 							</div>
 
 							
-							
 						</div>
+					</center>
+
 						<center><a href="concert.html#1920" class="button alt">Past Concerts</a></center>
 
 					</div>
@@ -134,16 +111,15 @@
 								<form name = "submit-to-google-sheet">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
-											<input type="text" name="firstname" id="firstName" value="" placeholder="First Name" />
+											<input type="text" name="firstname" id="firstName" value="" required="required" placeholder="First Name" />
 										</div>
 										<div class="6u$ 12u$(xsmall)">
-											<input type="text" name="lastname" id="lastName" value="" placeholder="Last Name" />
+											<input type="text" name="lastname" id="lastName" value="" required="required" placeholder="Last Name" />
 										</div>
 		
 										<div class="12u$">
-											<input type = "email" name="email" id="email" placeholder="Email"/>
+											<input type = "email" name="email" id="email"required="required" placeholder="Email"/>
 										</div>
-										
 									
 										<!-- https://script.google.com/macros/s/AKfycbw7rSIHUBg5MCDzA2bIW3JPCejD19nxwgdCm3CDmbuqjV4mHvtT/exec -->
 										<div class="12u$">
@@ -152,10 +128,7 @@
 												<li><input type="reset" value = "reset" class = "button "/></li>
 											</ul>
 										</div>
-
-										
 									</div>
-
 										<p class="js-success-message is-hidden">You have been added to the PSO Email list!</p>
 										<p class="js-error-message is-hidden">Oh no! Something's wrong!</p>
 								</form>
@@ -172,6 +145,7 @@
 							const errorMessage = document.querySelector('.js-error-message')
 							
 							form.addEventListener('submit', e => {
+								
 							  e.preventDefault()
 							  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 								.then(response => showSuccessMessage(response))
@@ -219,7 +193,7 @@
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
-						<li><a href="https://www.facebook.com/PennOrchestras/" class="icon fa-facebook"></a></li>
+						<li><a href="https://www.facebook.com/PennSymphony/" class="icon fa-facebook"></a></li>
 						<li><a href="https://www.instagram.com/pennsymphony/" class="icon fa-instagram"></a></li>
 					</ul>
 					<ul class="copyright">
